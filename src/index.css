@@ -1,13 +1,38 @@
+@import-normalize;
+
+@font-face {
+  font-family: 'Hobo';
+  src: url('../public/Fonts/hobo.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../public/Fonts/MontserratRegular.ttf') format('truetype');
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../public/Fonts/MontserratMedium.ttf') format('truetype');
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../public/Fonts/MontserratSemiBold.ttf') format('truetype');
+  font-weight: 600;
+}
+
 body {
+  font-size: 14px;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: monse;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+  color: var(--natural-green);
+  font-family: Montserrat, 'Montserrat';
+  font-weight: 500;
 }
