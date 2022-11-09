@@ -2,16 +2,12 @@ import globe from "../Icons/24/earthglobe.svg";
 import scales from "../Icons/24/scales.svg";
 import cart from "../Icons/24/cart.svg";
 import user from "../Icons/24/user.svg";
-import search from "../Icons/24/search.svg";
-import menu from "../Icons/24/menu.svg";
+import SearchField from "./Controls/SearchField";
 import "./Navigation.css";
 export const Navigation = () => {
   return (
     <nav className="navbar">
       <div className="navbar-container">
-        <div className="menu">
-          <img src={menu} />
-        </div>
         <div className="navigation-item logo">
           EPOXY
           <br />
@@ -37,30 +33,23 @@ export const Navigation = () => {
           </ul>
         </div>
         <div className="navigation-item">
-          <div className="search-container">
-            <input
-              className="search__input"
-              type="search"
-              placeholder="Search"
-            />
-            <span>
-              <img src={search} />
-            </span>
+          <SearchField />
+          <div className="nav-icon__group">
+            <div className={"navigation-icons"}>
+              <img src={globe} />
+            </div>
+            <div className={"navigation-icons"}>
+              <img src={user} />
+            </div>
           </div>
-        </div>
-        <div className="navigation-item">
-          <span className={"navigation-icons"}>
-            <img src={globe} />
-          </span>
-          <span className={"navigation-icons"}>
-            <img src={user} />
-          </span>
-          <span className={"navigation-icons"}>
-            <img src={scales} />
-          </span>
-          <span className={"navigation-icons"}>
-            <img src={cart} />
-          </span>
+          <div className="nav-icon__group">
+            <div className={"navigation-icons"}>
+              <img src={scales} />
+            </div>
+            <div className={"navigation-icons"}>
+              <img src={cart} />
+            </div>
+          </div>
         </div>
       </div>
     </nav>
