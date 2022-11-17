@@ -1,0 +1,16 @@
+
+.greeting-section{
+    height: 100vh;
+}
+.title_container{
+    padding-top: 65px;
+}
+.title{
+    color: var(--dark-green);
+    font-weight: 600;
+    font-size: 3em;
+}
+
+.subtitle{
+    font-size: 1.5em;
+}

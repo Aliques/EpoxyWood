@@ -24,6 +24,7 @@
 }
 
 body {
+  /* min-height: 100vh; */
   font-size: 14px;
   margin: 0;
   font-family: monse;
@@ -32,7 +33,13 @@ body {
 }
 
 * {
+  margin: 0;
+  
+  padding: 0;
   color: var(--natural-green);
   font-family: Montserrat, 'Montserrat';
   font-weight: 500;
+}
+#root {
+  /* height: 100vh; */
 }

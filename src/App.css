@@ -4,3 +4,7 @@
   --natural-green: #678983;
   --main-background:#e1e3ee;
 }
+
+.App{
+    height: 100vh;
+}

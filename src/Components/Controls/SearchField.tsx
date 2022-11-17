@@ -1,12 +1,12 @@
 import search from "../../Icons/24/search.svg";
-import "./SearchField.css";
+import s from "./SearchField.module.css";
 const SearchField = () => {
   return (
-    <div className="search-box">
-      <button className="btn-search">
+    <div className={s["search-box"]}>
+      <button className={s["btn-search"]}>
         <img src={search} />
       </button>
-      <input type="text" className="input-search" placeholder="Search" />
+      <input type="text" className={s["input-search"]} placeholder="Search" />
     </div>
   );
 };
