@@ -13,39 +13,45 @@ export const Navigation = () => {
           <br />
           HOUSE
         </div>
-        <div className="navbar-links">
-          <input type="checkbox" />
-          <div className="hamburger-lines">
-            <span className="line line1"></span>
-            <span className="line line2"></span>
-            <span className="line line3"></span>
+        <div className="navbar-links__container">
+          <div className="navbar-links">
+            <input type="checkbox" />
+            <div className="hamburger-lines">
+              <span className="line line1"></span>
+              <span className="line line2"></span>
+              <span className="line line3"></span>
+            </div>
+            <ul className="menu-items">
+              <li>
+                <a href="#">CATALOG</a>
+              </li>
+              <li>
+                <a href="#">FAQ</a>
+              </li>
+              <li>
+                <a href="#">CONTACTS</a>
+              </li>
+            </ul>
           </div>
-          <ul className="menu-items">
-            <li>
-              <a href="#">CATALOG</a>
-            </li>
-            <li>
-              <a href="#">FAQ</a>
-            </li>
-            <li>
-              <a href="#">CONTACTS</a>
-            </li>
-          </ul>
-        </div>
-        <div className="navigation-item">
-          <SearchField />
+          <div className="search">
+            <SearchField />
+          </div>
           <div className="nav-icon__container">
-            <div className={"navigation-icons"}>
-              <img src={globe} />
+            <div>
+              <div className={"navigation-icons"}>
+                <img src={globe} />
+              </div>
+              <div className={"navigation-icons"}>
+                <img src={user} />
+              </div>
             </div>
-            <div className={"navigation-icons"}>
-              <img src={user} />
-            </div>
-            <div className={"navigation-icons"}>
-              <img src={scales} />
-            </div>
-            <div className={"navigation-icons"}>
-              <img src={cart} />
+            <div>
+              <div className={"navigation-icons"}>
+                <img src={scales} />
+              </div>
+              <div className={"navigation-icons"}>
+                <img src={cart} />
+              </div>
             </div>
           </div>
         </div>
