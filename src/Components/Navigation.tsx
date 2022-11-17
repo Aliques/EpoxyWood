@@ -34,15 +34,13 @@ export const Navigation = () => {
         </div>
         <div className="navigation-item">
           <SearchField />
-          <div className="nav-icon__group">
+          <div className="nav-icon__container">
             <div className={"navigation-icons"}>
               <img src={globe} />
             </div>
             <div className={"navigation-icons"}>
               <img src={user} />
             </div>
-          </div>
-          <div className="nav-icon__group">
             <div className={"navigation-icons"}>
               <img src={scales} />
             </div>
