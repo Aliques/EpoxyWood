@@ -5,6 +5,7 @@
 }
 
 .input-search {
+    background: transparent;
     border: 1.5px solid var(--natural-green);
     padding: 5px 31px 5px 10px;
     width: 100px;
