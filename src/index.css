@@ -23,6 +23,12 @@
   font-weight: 600;
 }
 
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../public/Fonts/MontserratBold.ttf') format('truetype');
+  font-weight: 700;
+}
+
 body {
   /* min-height: 100vh; */
   font-size: 14px;
