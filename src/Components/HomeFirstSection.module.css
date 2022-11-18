@@ -57,12 +57,12 @@
     }
 
     .title {
-        font-size: 2.1em;
+        font-size: 3em;
     }
 
     .subtitle {
         margin-top: 10px;
-        font-size: 0.9em;
+        font-size: 1em;
     }
 
     .catalog_btn {
@@ -74,5 +74,17 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+    }
+}
+
+@media (max-width: 375px) {
+    .title {
+        font-size: 2.1em;
+    }
+    .navigation_btns {
+        margin-top: 15px;
+    }
+    .subtitle {
+        font-size: 0.9em;
     }
 }
