@@ -49,7 +49,7 @@ export const Navigation = () => {
               <SearchField />
             </div>
             <div className={s["nav-icon__container"]}>
-              <div>
+              <div className={s.icon_group}>
                 <div className={s["navigation-icons"]}>
                   <img src={globe} />
                 </div>
@@ -57,7 +57,7 @@ export const Navigation = () => {
                   <img src={user} />
                 </div>
               </div>
-              <div>
+              <div className={s.icon_group}>
                 <div className={s["navigation-icons"]}>
                   <img src={scales} />
                 </div>

@@ -13,7 +13,7 @@
     font-size: 0.9em;
     outline: none;
     border-radius: 25px;
-    color: #000;
+    color: var(--dark-green);
 }
 
 .input-search::placeholder {

@@ -149,6 +149,10 @@
     align-items: center;
     justify-content: space-between;
 }
+.icon_group{
+    display: flex;
+    flex-wrap: nowrap;
+}
 
 @media (max-width: 860px) {
     .logo {
