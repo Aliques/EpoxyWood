@@ -1,8 +1,7 @@
 import s from "./ProductCard.module.css";
 import cl from "classnames";
-import cart from "../Icons/24/cart.svg";
-import material from "../../public/Images/MaterialOverview.png";
-import defaultImg from "./Temp/DefaultImage.jpg";
+import cart from "../../Icons/24/cart.svg";
+import defaultImg from "../../Temp/DefaultImage.jpg";
 export const ProductCard = () => {
   var description =
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua";

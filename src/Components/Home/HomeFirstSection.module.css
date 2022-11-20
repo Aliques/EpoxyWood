@@ -2,7 +2,7 @@
     display: inline-block;
     width: 100%;
     height: 100vh;
-    background-image: url("../../public/Images/HomePreview.png");
+    background-image: url("../../../public/Images/HomePreview.png");
     margin: 0;
     padding: 0; 
     background-repeat:no-repeat;

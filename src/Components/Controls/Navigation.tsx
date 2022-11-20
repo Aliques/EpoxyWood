@@ -1,8 +1,8 @@
-import globe from "../Icons/24/earthglobe.svg";
-import scales from "../Icons/24/scales.svg";
-import cart from "../Icons/24/cart.svg";
-import user from "../Icons/24/user.svg";
-import SearchField from "./Controls/SearchField";
+import globe from "../../Icons/24/earthglobe.svg";
+import scales from "../../Icons/24/scales.svg";
+import cart from "../../Icons/24/cart.svg";
+import user from "../../Icons/24/user.svg";
+import SearchField from "./SearchField";
 import s from "./Navigation.module.css";
 import cl from "classnames";
 import { useEffect, useRef } from "react";

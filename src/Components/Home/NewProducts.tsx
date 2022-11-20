@@ -2,8 +2,8 @@
 import s from "./NewProducts.module.css";
 import cl from "classnames";
 import material from "../../public/Images/MaterialOverview.png";
-import { ProductCard } from "./ProductCard";
-import RoundedButton from "./Controls/RoundedButton";
+import { ProductCard } from "../Controls/ProductCard";
+import RoundedButton from "../Controls/RoundedButton";
 export const NewProducts = () => {
   return (
     <div className={s.container}>

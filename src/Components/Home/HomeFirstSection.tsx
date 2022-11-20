@@ -1,6 +1,6 @@
 import s from "./HomeFirstSection.module.css";
 import cl from "classnames";
-import RoundedButton from "./Controls/RoundedButton";
+import RoundedButton from "../Controls/RoundedButton";
 export const HomeFirstSection = () => {
   return (
     <section className={s["greeting-section"]}>

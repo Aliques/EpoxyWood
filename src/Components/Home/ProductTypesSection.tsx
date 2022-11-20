@@ -1,5 +1,5 @@
 import s from "./ProductTypesSection.module.css";
-import defaultImg from "./Temp/DefaultImage.jpg";
+import defaultImg from "../../Temp/DefaultImage.jpg";
 export const ProductTypesSection = () => {
   return (
     <div className={s.container}>
