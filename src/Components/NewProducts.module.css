@@ -1,0 +1,25 @@
+.container{
+}
+
+.cards_container{
+    justify-content: center;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-between;
+    padding: 60px 45px;
+}
+.card_block{
+    width: 25%;
+    margin: 10px;
+}
+
+.title{
+    font-size: 1.2em;
+    font-weight: 600;
+    color: var(--dark-green);
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    
+}
