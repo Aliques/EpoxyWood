@@ -1,3 +1,6 @@
+.container{
+    padding: 0;
+}
 .title{
     text-align: center;
     font-size: 1.5em;
@@ -33,7 +36,7 @@
 }
 
 .number{
-    margin-right: 20px;
+    /* margin-right: 20px; */
     border-radius: 50%;
     min-width: 20px;
     min-height: 20px;
@@ -45,9 +48,16 @@
 }
 .design{
     text-align: center
+} 
+.description{
+    padding: 5px 0 0 15px;
 }
 
 @media (max-width: 576px){
+    .container{
+        margin-top: 30px;
+        padding: 0 5%;
+    }
     .description_container img{
        display: none;
     }
@@ -55,10 +65,11 @@
         display: inline-block;
     }
     .description_container{
+        width: 100%;
         display: block;
-        margin: 0 auto;
     }
     .description_text:nth-child(1){
         padding: 0px;
     }
+   
 }
