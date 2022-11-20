@@ -26,38 +26,15 @@
 }
 
 .navigation_btns {
+    display: flex;
     margin-top: 30px;
 }
 
-.navigation_btn {
-    border: 1.5px solid var(--natural-green);
-    width: 155px;
-    height: 40px;
-    font-size: 0.8em;
-    font-weight: 600;
-    background-color: transparent;
-    border-radius: 20px;
-    cursor: pointer;
-    transition: all .3s;
-}
-
-
 .catalog_btn {
+    display: inline;
     margin-right: 40px;
-    color: var(--light-text);
-    background-color: var(--natural-green);
 }
 
-.catalog_btn:hover {
-    background-color: transparent;
-    color: var(--natural-green);
-
-}
-
-.navigation_btn:nth-child(2):hover {
-    background-color: var(--natural-green);
-    color: var(--light-text);
-}
 
 @media (max-width: 576px) {
     .title_container {

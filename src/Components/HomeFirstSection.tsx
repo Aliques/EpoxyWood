@@ -1,5 +1,6 @@
 import s from "./HomeFirstSection.module.css";
 import cl from "classnames";
+import RoundedButton from "./Controls/RoundedButton";
 export const HomeFirstSection = () => {
   return (
     <section className={s["greeting-section"]}>
@@ -10,10 +11,14 @@ export const HomeFirstSection = () => {
           <br /> of wood and epoxy resin.
         </div>
         <div className={s.navigation_btns}>
-          <button className={cl(s.navigation_btn, s.catalog_btn)}>
-            OPEN CATALOG
-          </button>
-          <button className={s.navigation_btn}>DESIGN YOUR TABLE</button>
+          <div className={s.catalog_btn}>
+            <RoundedButton width={180} height={40} isFill={true}>
+              OPEN CATALOG
+            </RoundedButton>
+          </div>
+          <RoundedButton width={180} height={40} isFill={false}>
+            DESIGN YOUR TABLE
+          </RoundedButton>
         </div>
       </div>
     </section>

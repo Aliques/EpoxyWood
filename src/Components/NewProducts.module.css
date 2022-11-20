@@ -2,14 +2,13 @@
 }
 
 .cards_container{
-    justify-content: center;
+    justify-content: space-between;
     flex-wrap: wrap;
     display: flex;
-    justify-content: space-between;
-    padding: 60px 45px;
+    padding: 2% 5%;
 }
 .card_block{
-    width: 25%;
+    width: 22%;
     margin: 10px;
 }
 
@@ -19,7 +18,18 @@
     color: var(--dark-green);
     text-align: center;
 }
-
+.more{padding-top: 10px;
+    text-align: center;
+}
 @media (max-width: 768px) {
+    .card_block{
+        width: 45%;
+    }
     
+}
+
+@media (max-width: 576px){
+    .card_block{
+        width: 40%;
+    }
 }

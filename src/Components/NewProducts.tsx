@@ -3,6 +3,7 @@ import s from "./NewProducts.module.css";
 import cl from "classnames";
 import material from "../../public/Images/MaterialOverview.png";
 import { ProductCard } from "./ProductCard";
+import RoundedButton from "./Controls/RoundedButton";
 export const NewProducts = () => {
   return (
     <div className={s.container}>
@@ -20,6 +21,9 @@ export const NewProducts = () => {
         <div className={s.card_block}>
           <ProductCard />
         </div>
+      </div>
+      <div className={s.more}>
+        <RoundedButton width={220}>SHOW MORE</RoundedButton>
       </div>
     </div>
   );
