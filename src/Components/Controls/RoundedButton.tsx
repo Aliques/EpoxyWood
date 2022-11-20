@@ -15,7 +15,7 @@ const RoundedButton = ({
   isFill = false,
 }: BtnProps) => {
   return (
-    <div>
+    <div style={{ display: "inline-block" }}>
       {isFill ? (
         <button
           style={{ height, width, borderRadius: height / 2 }}

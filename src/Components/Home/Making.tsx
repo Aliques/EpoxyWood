@@ -53,7 +53,7 @@ export const Making = () => {
                 performed under the contract.
               </div>
             </div>
-            <div className={s.decription_point}>
+            <div className={s.design}>
               <RoundedButton width={160} height={40}>
                 Design your table
               </RoundedButton>
