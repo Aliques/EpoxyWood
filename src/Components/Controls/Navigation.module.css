@@ -4,6 +4,7 @@
     align-items: center;
     height: 65px;
     margin: 0 63px;
+    
 }
 .cover{
     display: none;
@@ -33,6 +34,7 @@
     background: #fff;
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
+    box-shadow: 0 0 3px 0px grey;
 }
 .navbar-links {
     width:auto;

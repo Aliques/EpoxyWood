@@ -1,0 +1,45 @@
+.title{
+    text-align: center;
+    font-size: 1.5em;
+    color: var(--dark-green);
+    font-weight: 600;
+}
+
+.makeing_container{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.description_container{
+    display: inline-block;
+    width: 45%;
+}
+
+.description_container img{
+    width: 100%;
+    object-fit: cover;
+}
+.description_container .description_text:nth-child(1){
+    padding-left: 90px;
+}
+.description_container .description_text:nth-child(2){
+    margin-top: 30px;
+}
+.decription_point{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.number{
+    margin-right: 20px;
+    border-radius: 50%;
+    min-width: 20px;
+    min-height: 20px;
+    width: 20px;
+    line-height: 1.3em;
+    text-align: center;
+    height: 20px;
+    border: 1.5px solid var(--natural-green);
+}
