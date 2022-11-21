@@ -7,7 +7,7 @@ import s from "./Home.module.css";
 import sl from "classnames";
 export const Home = () => {
   return (
-    <div style={{ paddingBottom: 50 }}>
+    <div>
       <HomeFirstSection />
       <ProductTypesSection />
       <div>
