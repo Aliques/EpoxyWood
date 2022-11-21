@@ -11,13 +11,6 @@
     width: 22%;
     margin: 10px;
 }
-
-.title{
-    font-size: 1.2em;
-    font-weight: 600;
-    color: var(--dark-green);
-    text-align: center;
-}
 .more{padding-top: 10px;
     text-align: center;
 }
