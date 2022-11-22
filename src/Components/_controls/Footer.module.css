@@ -1,11 +1,13 @@
 .container{
     margin-top: 30px;
     background-color: var(--footer-backgound);
-    padding: 20px 5%;
     display: flex;
     justify-content: space-between;
+    position: absolute;
+    width: 100%;
 }
 .links{
+    padding: 20px 5%;
     width: 100%;
     line-height: 2em;
     white-space: nowrap

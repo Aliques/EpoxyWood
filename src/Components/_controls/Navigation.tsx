@@ -20,9 +20,11 @@ export const Navigation = () => {
       <nav className={s.navbar}>
         <div className={s["navbar-container"]}>
           <div className={cl(s["navigation-item"], s.logo)}>
-            EPOXY
-            <br />
-            HOUSE
+            <Link to="/">
+              EPOXY
+              <br />
+              HOUSE
+            </Link>
           </div>
           <div className={s["navbar-links__container"]}>
             <div className={s["navbar-links"]}>
@@ -39,10 +41,10 @@ export const Navigation = () => {
                   <Link to="/catalog">CATALOG</Link>
                 </li>
                 <li>
-                  <a href="#">FAQ</a>
+                  <Link to="/faq">FAQ</Link>
                 </li>
                 <li>
-                  <a href="#">CONTACTS</a>
+                  <Link to="/contacts">CONTACTS</Link>
                 </li>
               </ul>
             </div>
