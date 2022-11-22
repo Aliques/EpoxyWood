@@ -1,6 +1,6 @@
 import s from "./Making.module.css";
 import cl from "classnames";
-import RoundedButton from "../Controls/RoundedButton";
+import RoundedButton from "../_controls/RoundedButton";
 import firstImg from "../../Temp/MakingDescriptionImg_1.jpg";
 export const Making = () => {
   return (

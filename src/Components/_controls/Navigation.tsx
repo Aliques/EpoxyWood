@@ -6,6 +6,7 @@ import SearchField from "./SearchField";
 import s from "./Navigation.module.css";
 import cl from "classnames";
 import { useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
 export const Navigation = () => {
   const ref = useRef<HTMLDivElement>(null);
   window.addEventListener("scroll", function () {
@@ -35,7 +36,7 @@ export const Navigation = () => {
 
               <ul className={s["menu-items"]}>
                 <li>
-                  <a href="#">CATALOG</a>
+                  <Link to="/catalog">CATALOG</Link>
                 </li>
                 <li>
                   <a href="#">FAQ</a>

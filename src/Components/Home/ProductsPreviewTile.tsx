@@ -1,8 +1,8 @@
 /**/
 import s from "./ProductsPreviewTile.module.css";
 import cl from "classnames";
-import { ProductCard } from "../Controls/ProductCard";
-import RoundedButton from "../Controls/RoundedButton";
+import { ProductCard } from "../_controls/ProductCard";
+import RoundedButton from "../_controls/RoundedButton";
 export const ProductsPreviewTile = () => {
   return (
     <div className={s.container}>
