@@ -8,7 +8,8 @@
 }
 
 .App{
-  position: relative;
-    height: 100vh;
-    padding-top: 65px;
+}
+
+.AppContent{
+  min-height: calc(100vh - 217px);
 }

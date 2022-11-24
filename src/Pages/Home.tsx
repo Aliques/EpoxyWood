@@ -10,16 +10,14 @@ export const Home = () => {
     <div>
       <HomeFirstSection />
       <ProductTypesSection />
-      <div>
-        <div className={sl(s.section_title, s.products)}>New products</div>
+      <div className={s.section_container}>
+        <div className={s.section_title}>New products</div>
         <ProductsPreviewTile />
       </div>
       <AboutUs />
       <Making />
-      <div>
-        <div className={sl(s.section_title, s.clients_designes)}>
-          Client's table design
-        </div>
+      <div className={s.section_container}>
+        <div className={s.section_title}>Client's table design</div>
         <ProductsPreviewTile />
       </div>
     </div>

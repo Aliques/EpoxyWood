@@ -12,7 +12,7 @@
     width: 100%;
     display: grid;
     grid-template-columns: repeat(auto-fit,33%);
-    grid-template-rows: repeat(auto-fit,75%);
+    grid-template-rows: repeat(auto-fit,90%);
     justify-content: space-between;
 }
 

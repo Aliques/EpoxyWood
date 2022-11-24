@@ -1,9 +1,7 @@
 .container{
-    margin-top: 30px;
     background-color: var(--footer-backgound);
     display: flex;
     justify-content: space-between;
-    position: absolute;
     width: 100%;
 }
 .links{

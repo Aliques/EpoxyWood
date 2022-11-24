@@ -12,13 +12,16 @@ import { Faq } from "./Pages/Faq";
 function App() {
   return (
     <div className="App">
-      <Navigation />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/catalog" element={<Catalog />} />
-        <Route path="/faq" element={<Faq />} />
-        <Route path="/contacts" element={<Contacts />} />
-      </Routes>
+      <div className="AppContent">
+        <Navigation />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/catalog" element={<Catalog />} />
+          <Route path="/faq" element={<Faq />} />
+          <Route path="/contacts" element={<Contacts />} />
+        </Routes>
+      </div>
+
       <Footer />
     </div>
   );
