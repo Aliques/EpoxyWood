@@ -12,7 +12,7 @@ import { Faq } from "./Pages/Faq";
 function App() {
   return (
     <div className="App">
-      <div className="AppContent">
+      <div className="content_container">
         <Navigation />
         <Routes>
           <Route path="/" element={<Home />} />
@@ -21,8 +21,9 @@ function App() {
           <Route path="/contacts" element={<Contacts />} />
         </Routes>
       </div>
-
-      <Footer />
+      <div className="footer_container">
+        <Footer />
+      </div>
     </div>
   );
 }

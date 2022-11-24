@@ -19,7 +19,7 @@ export const Navigation = () => {
       <div className={s.nav_bg} ref={ref}></div>
       <nav className={s.navbar}>
         <div className={s["navbar-container"]}>
-          <div className={cl(s["navigation-item"],s.logo_container)}>
+          <div className={cl(s["navigation-item"], s.logo_container)}>
             <Link to="/" className={s.logo}>
               EPOXY
               <br />

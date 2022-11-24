@@ -8,8 +8,15 @@
 }
 
 .App{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
 }
 
-.AppContent{
-  min-height: calc(100vh - 217px);
+.content_container{
+  flex-grow: 1;
+}
+.footer_container{
+  flex-grow: 0;
 }
