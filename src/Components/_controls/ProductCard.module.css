@@ -1,5 +1,6 @@
 .product_image{
     width: 100%;
+    aspect-ratio: 0.8;
     object-fit: cover;
 }
 
@@ -42,7 +43,6 @@ margin-right: 5px;
 }
 
 .img_container{
-    height: 100%;
 }
 
 @media (max-width: 576px){

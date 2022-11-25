@@ -4,21 +4,15 @@ import cl from "classnames";
 import { ProductCard } from "../_controls/ProductCard";
 import RoundedButton from "../_controls/RoundedButton";
 export const ProductsPreviewTile = () => {
+  let list: number[] = [1, 1, 1, 1];
   return (
     <div className={s.container}>
       <div className={s.cards_container}>
-        <div className={s.card_block}>
-          <ProductCard />
-        </div>
-        <div className={s.card_block}>
-          <ProductCard />
-        </div>
-        <div className={s.card_block}>
-          <ProductCard />
-        </div>
-        <div className={s.card_block}>
-          <ProductCard />
-        </div>
+        {list.map(() => (
+          <div className={s.card_block}>
+            <ProductCard />
+          </div>
+        ))}
       </div>
       <div className={s.more}>
         <RoundedButton width={220}>SHOW MORE</RoundedButton>
