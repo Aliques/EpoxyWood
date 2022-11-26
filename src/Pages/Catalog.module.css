@@ -18,7 +18,9 @@
 .filter_container{
  margin: 30px 0;
 }
-
+.product_type{
+    width: 150px;
+}
 @media (max-width: 576px){
     .total_count{
         font-size: 0.8em;
