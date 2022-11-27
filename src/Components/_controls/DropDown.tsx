@@ -1,56 +1,70 @@
-import s from "./DropDown.module.css";
+import "./DropDown.css";
 import cl from "classnames";
-import { useEffect, useRef } from "react";
+import { createRef, useEffect, useRef, useState } from "react";
 
 interface SelectProps {
   data?: KeyValuePairInterface<number, string>[];
   defaultSelectedIndex?: number;
 }
-export const DropDown = ({ data, defaultSelectedIndex }: SelectProps) => {
-  useEffect(() => {
-    const dropdowns = document.querySelectorAll(".dropdown");
-    console.log(dropdowns);
+export const DropDown = ({ data, defaultSelectedIndex = 0 }: SelectProps) => {
+  const refMenu = useRef<HTMLUListElement>(null);
+  const refSelected = useRef<HTMLSpanElement>(null);
+  const refCaret = useRef<HTMLDivElement>(null);
+  const refSelect = useRef<HTMLDivElement>(null);
+  const [selectedText, setSelectedText] = useState(
+    data != undefined ? data[defaultSelectedIndex].value : null
+  );
+  function selectClick() {
+    var menu = refMenu.current;
+    var caret = refCaret.current;
+    var select = refSelect.current;
+    if (select) {
+      select.classList.toggle("select-clicked");
+    }
+    if (caret) {
+      caret.classList.toggle("caret-rotate");
+    }
+    if (menu) {
+      menu.classList.toggle("menu-open");
+    }
+  }
 
-    dropdowns.forEach((dropdown) => {
-      console.log(1);
+  function optionClick(args: React.MouseEvent<HTMLElement, MouseEvent>) {
+    var selected = refSelected.current;
+    var menu = refMenu.current;
+    var caret = refCaret.current;
+    var select = refSelect.current;
 
-      const select = dropdown.querySelector(".select");
-      const caret = dropdown.querySelector(".caret");
-      const menu = dropdown.querySelector(".menu");
-      const options = dropdown.querySelectorAll(
-        "menu li"
-      ) as NodeListOf<HTMLElement>;
-      const selected = dropdown.querySelector(".selected") as HTMLElement;
-
-      select?.addEventListener("click", () => {
-        select.classList.toggle("select-clicked");
-        caret?.classList.toggle("caret-rotate");
-        menu?.classList.toggle("menu-open");
+    if (select) {
+      select.classList.remove("select-clicked");
+    }
+    if (caret) {
+      caret.classList.remove("caret-rotate");
+    }
+    if (menu) {
+      menu.childNodes.forEach((option) => {
+        (option as HTMLLIElement).classList.remove("active");
       });
+    }
+    if (selected) {
+      setSelectedText(args.currentTarget.innerText ?? "");
+    }
+    (args.target as HTMLLIElement).classList.add("active");
+  }
 
-      options.forEach((option) => {
-        option.addEventListener("click", () => {
-          selected.innerText = option.innerText;
-          select?.classList.remove("select-clicked");
-          caret?.classList.remove("caret-rotate");
-          menu?.classList.remove("menu-open");
-          options.forEach((option) => {
-            option.classList.remove("active");
-          });
-          option.classList.add("active");
-        });
-      });
-    });
-  }, []);
   return (
-    <div className={s.dropdown}>
-      <div className={s.select}>
-        <span className={s.selected}></span>
-        <div className={s.caret}></div>
+    <div className="dropdown">
+      <div ref={refSelect} className="select" onClick={selectClick}>
+        <span ref={refSelected} className="selected">
+          {selectedText}
+        </span>
+        <div className="caret"></div>
       </div>
-      <ul className={s.menu}>
+      <ul className="menu" ref={refMenu}>
         {data?.map((o, i) => (
-          <li key={o.key}>{o.value}</li>
+          <li onClick={(o) => optionClick(o)} key={o.key}>
+            {o.value}
+          </li>
         ))}
       </ul>
     </div>
