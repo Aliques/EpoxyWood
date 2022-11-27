@@ -3,8 +3,6 @@ import sl from "classnames";
 import { ProductTypesSection } from "../Components/Home/ProductTypesSection";
 import { ProductCard } from "../Components/_controls/ProductCard";
 import RoundedButton from "../Components/_controls/RoundedButton";
-import Select from "../Components/_controls/Select/Select";
-import Option from "../Components/_controls/Select/Options";
 import { DropDown } from "../Components/_controls/DropDown";
 export const Catalog = () => {
   //TODO: temporary data
