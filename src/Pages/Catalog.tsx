@@ -5,6 +5,7 @@ import { ProductCard } from "../Components/_controls/ProductCard";
 import RoundedButton from "../Components/_controls/RoundedButton";
 import Select from "../Components/_controls/Select/Select";
 import Option from "../Components/_controls/Select/Options";
+import { DropDown } from "../Components/_controls/DropDown";
 export const Catalog = () => {
   //TODO: temporary data
   let list: number[] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
@@ -24,11 +25,12 @@ export const Catalog = () => {
       <div className={s.filter_container}>
         <div className={s.total_count}>({totalCount} products)</div>
         <div className={s.product_type}>
-          <Select defaultValue={typeList[0].value}>
+          <DropDown data={typeList} />
+          {/* <Select defaultValue={typeList[0].value}>
             {typeList.map((o, i) => (
-              <Option value={o.value}>{o.value}</Option>
+              <Option value={o.key}>{o.value}</Option>
             ))}
-          </Select>
+          </Select> */}
         </div>
       </div>
       <div className={s.catalog_container}>

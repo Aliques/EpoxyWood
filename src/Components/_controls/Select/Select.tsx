@@ -6,8 +6,8 @@ import { SelectContext } from "./SelectContext";
 
 const Select: React.FC<{
   children: ReactNode | ReactNode[];
-  defaultValue?: string;
-  placeholder?: string;
+  defaultValue?: any;
+  placeholder?: any;
 }> = ({ children, defaultValue, placeholder }) => {
   const [selectedOption, setSelectedOption] = useState(defaultValue || "");
   const [showDropdown, setShowDropdown] = useState(false);
@@ -19,7 +19,7 @@ const Select: React.FC<{
 
   useOnClickOutside(selectContainerRef, clickOutsideHandler);
 
-  const updateSelectedOption = (option: string) => {
+  const updateSelectedOption = (option: any) => {
     setSelectedOption(option);
     setShowDropdown(false);
   };

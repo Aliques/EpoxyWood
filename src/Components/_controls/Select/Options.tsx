@@ -4,7 +4,7 @@ import s from "./Select.module.css";
 
 const Option: React.FC<{
   children: ReactNode | ReactNode[];
-  value: string;
+  value: any;
 }> = ({ children, value }) => {
   const { changeSelectedOption } = useSelectContext();
 
