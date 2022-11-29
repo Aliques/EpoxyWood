@@ -65,13 +65,17 @@ export const DropDown = ({ data, defaultSelectedIndex = 0 }: SelectProps) => {
           <span></span>
         </span>
       </div>
-      <ul className="menu" ref={refMenu}>
-        {data?.map((o, i) => (
-          <li onClick={(o) => optionClick(o)} key={o.key}>
-            {o.value}
-          </li>
-        ))}
-      </ul>
+      {data != undefined && data.length > 0 ? (
+        <ul className="menu" ref={refMenu}>
+          {data?.map((o) => (
+            <li onClick={(o) => optionClick(o)} key={o.key}>
+              {o.value}
+            </li>
+          ))}
+        </ul>
+      ) : (
+        ""
+      )}
     </div>
   );
 };

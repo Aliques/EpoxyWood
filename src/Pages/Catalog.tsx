@@ -16,14 +16,23 @@ export const Catalog = () => {
     { key: 5, value: "Clock" },
     { key: 6, value: "Decor" },
   ];
+  let sort: KeyValuePairInterface<number, string>[] = [
+    { key: 0, value: "by popular" },
+    { key: 1, value: "by cost" },
+  ];
   var totalCount: number = 423;
 
   return (
     <div className={s.container}>
       <div className={s.filter_container}>
-        <div className={s.total_count}>({totalCount} products)</div>
-        <div className={s.product_type}>
-          <DropDown data={typeList} />
+        <div>
+          <div className={s.product_type}>
+            <DropDown data={typeList} defaultSelectedIndex={0} />
+          </div>
+          <div className={s.total_count}>({totalCount} products)</div>
+        </div>
+        <div style={{ width: "110px" }}>
+          <DropDown data={sort} defaultSelectedIndex={0} />
         </div>
       </div>
       <div className={s.catalog_container}>
