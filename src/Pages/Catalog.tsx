@@ -24,11 +24,6 @@ export const Catalog = () => {
         <div className={s.total_count}>({totalCount} products)</div>
         <div className={s.product_type}>
           <DropDown data={typeList} />
-          {/* <Select defaultValue={typeList[0].value}>
-            {typeList.map((o, i) => (
-              <Option value={o.key}>{o.value}</Option>
-            ))}
-          </Select> */}
         </div>
       </div>
       <div className={s.catalog_container}>

@@ -1,6 +1,6 @@
 import "./DropDown.css";
-import cl from "classnames";
-import { createRef, useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
+import useOnClickOutside from "../../Hooks/UseOnClickOutside";
 
 interface SelectProps {
   data?: KeyValuePairInterface<number, string>[];
@@ -10,19 +10,28 @@ export const DropDown = ({ data, defaultSelectedIndex = 0 }: SelectProps) => {
   const refMenu = useRef<HTMLUListElement>(null);
   const refSelected = useRef<HTMLSpanElement>(null);
   const refCaret = useRef<HTMLDivElement>(null);
-  const refSelect = useRef<HTMLDivElement>(null);
+  const selectContainerRef = useRef(null);
+  const clickOutsideHandler = () => {
+    var menu = refMenu.current;
+    var caret = refCaret.current;
+    if (caret) {
+      caret.classList.remove("active");
+    }
+    if (menu) {
+      menu.classList.remove("menu-open");
+    }
+  };
+  useOnClickOutside(selectContainerRef, clickOutsideHandler);
+
   const [selectedText, setSelectedText] = useState(
     data != undefined ? data[defaultSelectedIndex].value : null
   );
+
   function selectClick() {
     var menu = refMenu.current;
     var caret = refCaret.current;
-    var select = refSelect.current;
-    if (select) {
-      select.classList.toggle("select-clicked");
-    }
     if (caret) {
-      caret.classList.toggle("caret-rotate");
+      caret.classList.toggle("active");
     }
     if (menu) {
       menu.classList.toggle("menu-open");
@@ -33,32 +42,28 @@ export const DropDown = ({ data, defaultSelectedIndex = 0 }: SelectProps) => {
     var selected = refSelected.current;
     var menu = refMenu.current;
     var caret = refCaret.current;
-    var select = refSelect.current;
 
-    if (select) {
-      select.classList.remove("select-clicked");
-    }
     if (caret) {
-      caret.classList.remove("caret-rotate");
+      caret.classList.remove("active");
     }
     if (menu) {
-      menu.childNodes.forEach((option) => {
-        (option as HTMLLIElement).classList.remove("active");
-      });
+      menu.classList.remove("menu-open");
     }
     if (selected) {
       setSelectedText(args.currentTarget.innerText ?? "");
     }
-    (args.target as HTMLLIElement).classList.add("active");
   }
 
   return (
-    <div className="dropdown">
-      <div ref={refSelect} className="select" onClick={selectClick}>
+    <div ref={selectContainerRef} className="dropdown">
+      <div className="select" onClick={selectClick}>
         <span ref={refSelected} className="selected">
           {selectedText}
         </span>
-        <div className="caret"></div>
+        <span ref={refCaret} className="arrow">
+          <span></span>
+          <span></span>
+        </span>
       </div>
       <ul className="menu" ref={refMenu}>
         {data?.map((o, i) => (

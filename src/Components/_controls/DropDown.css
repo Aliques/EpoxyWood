@@ -1,7 +1,6 @@
 .dropdown{
-    min-width:15em;
+    min-width:5em;
     position: relative;
-    margin: 2em;
 }
 
 .dropdown *{
@@ -9,25 +8,18 @@
 }
 
 .select{
-    background-color: #2a2f3b;
+    background-color: transparent;
+    border-bottom: 1.5px solid  var(--natural-green);;
     color: #fff;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-radius: 0.5em;
-    padding: 1em;
     cursor: pointer;
     transition: background-color 0.3s;
 }
 
 /*Set from ts*/
 .select-clicked{
- border: 2px #26489a;
- box-shadow: 0 0 0.8em #26489a;
-}
-
-.select:hover{
-    background: #323741;
 }
 
 .caret{
@@ -35,24 +27,19 @@
     height: 0;
     border-left: 5px solid transparent;
     border-right: 5px solid transparent;
-    border-top: 6px solid #fff;
+    border-top: 6px solid #000;
     transition: 0.3s;
 }
 
-.caret-rotate{
-    transform: rotate(180deg);
-}
 
 .menu{
     list-style: none;
     padding: 0.2em 0.5em;
-    background: #323741;
-    border: 1px #363a43 solid;
-    box-shadow: 0 0.5em 1em rgba(0,0,0,0.2);
+    background: rgba(232, 232, 232, 0.85);
+    backdrop-filter: blur(5px);
     border-radius: 0.5em;
-    color:#fff;
     position: absolute;
-    top:3;
+    top:1.5em;
     left: 50%;
     width: 100%;
     transform: translateX(-50%);
@@ -60,6 +47,9 @@
     display: none;
     transition: 0.2s;
     z-index: 1;
+    -webkit-box-shadow: 0 0 10px 0px var(--light-gray) inset;
+    -moz-box-shadow: 0 0 10px 0px var(--light-gray) inset;
+    box-shadow: 0 0 10px 0px var(--light-gray) inset;
 }
 
 .menu li{
@@ -67,17 +57,53 @@
     margin: 0.3em 0;
     border-radius: 0.5em;
     cursor: pointer;
+    transition: color 0.5s;
 }
 
 .menu li:hover{
-    background: #2a2d35;
-}
-
-.active{
-    background: #32342a;
+    color: var(--dark-green);
 }
 
 .menu-open{
     display: block;
     opacity: 1;
 }
+
+.arrow{
+    width: 1.05em;
+    height: 1rem;
+    display: inline-block;
+    position: relative;
+    
+}
+
+.arrow span{
+    top: .5rem;
+    position: absolute;
+    width :.5rem;
+    height: .1rem;
+    background-color: var(--natural-green);
+    display: inline-block;
+    transition: all .2s ease;
+  
+}
+
+.arrow span:first-of-type{
+    left: 0;
+    transform: rotate(35deg);
+}
+
+.arrow span:last-of-type{
+    right: 0;
+    transform: rotate(-35deg);
+}
+
+
+.active span:first-of-type{
+    transform: rotate(-35deg);
+}
+
+.active span:last-of-type{
+    transform: rotate(35deg);
+}
+
