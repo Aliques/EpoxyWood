@@ -25,14 +25,14 @@ export const Catalog = () => {
   return (
     <div className={s.container}>
       <div className={s.filter_container}>
-        <div>
+        <div className={s.total_count}>({totalCount} products)</div>
+        <div className={s.filter_group}>
           <div className={s.product_type}>
             <DropDown data={typeList} defaultSelectedIndex={0} />
           </div>
-          <div className={s.total_count}>({totalCount} products)</div>
-        </div>
-        <div style={{ width: "110px" }}>
-          <DropDown data={sort} defaultSelectedIndex={0} />
+          <div className={s.product_type}>
+            <DropDown data={sort} defaultSelectedIndex={0} />
+          </div>
         </div>
       </div>
       <div className={s.catalog_container}>
