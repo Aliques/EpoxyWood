@@ -3,8 +3,15 @@ import sl from "classnames";
 import { ProductTypesSection } from "../Components/Home/ProductTypesSection";
 import { ProductCard } from "../Components/_controls/ProductCard";
 import RoundedButton from "../Components/_controls/RoundedButton";
-import { DropDown } from "../Components/_controls/DropDown";
+import { Select } from "../Components/Select/Select";
+import { useRef, useState } from "react";
 export const Catalog = () => {
+  const [typeSelected, setTypeSelected] = useState<
+    KeyValuePairInterface<number, string>
+  >({ key: 0, value: "" });
+  const [sortSelected, setSortSelected] = useState<
+    KeyValuePairInterface<number, string>
+  >({ key: 0, value: "" });
   //TODO: temporary data
   let list: number[] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
   let typeList: KeyValuePairInterface<number, string>[] = [
@@ -28,10 +35,18 @@ export const Catalog = () => {
         <div className={s.total_count}>({totalCount} products)</div>
         <div className={s.filter_group}>
           <div className={s.product_type}>
-            <DropDown data={typeList} defaultSelectedIndex={0} />
+            <Select
+              setSelected={setTypeSelected}
+              data={typeList}
+              defaultSelectedIndex={0}
+            />
           </div>
           <div className={s.product_type}>
-            <DropDown data={sort} defaultSelectedIndex={0} />
+            <Select
+              data={sort}
+              setSelected={setSortSelected}
+              defaultSelectedIndex={0}
+            />
           </div>
         </div>
       </div>

@@ -1,12 +1,19 @@
-import "./DropDown.css";
-import { useRef, useState } from "react";
+import "./Select.css";
+import { Dispatch, useRef, useState } from "react";
 import useOnClickOutside from "../../Hooks/UseOnClickOutside";
 
 interface SelectProps {
   data?: KeyValuePairInterface<number, string>[];
   defaultSelectedIndex?: number;
+  setSelected: React.Dispatch<
+    React.SetStateAction<KeyValuePairInterface<number, string>>
+  >;
 }
-export const DropDown = ({ data, defaultSelectedIndex = 0 }: SelectProps) => {
+export const Select = ({
+  data,
+  defaultSelectedIndex = 0,
+  setSelected,
+}: SelectProps) => {
   const refMenu = useRef<HTMLUListElement>(null);
   const refSelected = useRef<HTMLSpanElement>(null);
   const refCaret = useRef<HTMLDivElement>(null);
@@ -26,7 +33,6 @@ export const DropDown = ({ data, defaultSelectedIndex = 0 }: SelectProps) => {
   const [selectedText, setSelectedText] = useState(
     data != undefined ? data[defaultSelectedIndex].value : null
   );
-
   function selectClick() {
     var menu = refMenu.current;
     var caret = refCaret.current;
@@ -38,7 +44,14 @@ export const DropDown = ({ data, defaultSelectedIndex = 0 }: SelectProps) => {
     }
   }
 
-  function optionClick(args: React.MouseEvent<HTMLElement, MouseEvent>) {
+  function changeSelectedOption(
+    args: React.MouseEvent<HTMLElement, MouseEvent>
+  ) {
+    let selectedValue = data?.find(
+      (o) => o.value === args.currentTarget.innerText
+    );
+
+    setSelected(selectedValue || { key: 0, value: "" });
     var selected = refSelected.current;
     var menu = refMenu.current;
     var caret = refCaret.current;
@@ -68,9 +81,7 @@ export const DropDown = ({ data, defaultSelectedIndex = 0 }: SelectProps) => {
       {data != undefined && data.length > 0 ? (
         <ul className="menu" ref={refMenu}>
           {data?.map((o) => (
-            <li onClick={(o) => optionClick(o)} key={o.key}>
-              {o.value}
-            </li>
+            <li onClick={(o) => changeSelectedOption(o)}>{o.value}</li>
           ))}
         </ul>
       ) : (
