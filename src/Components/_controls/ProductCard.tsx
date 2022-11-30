@@ -6,7 +6,7 @@ export const ProductCard = () => {
   var description =
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua";
 
-  /*Обрезаем строку описания */
+  /*Обрезаем строку описания до 35 символов*/
   function CutDescription(str: string): String {
     return str.substring(0, 35).concat(" ...");
   }
@@ -23,7 +23,9 @@ export const ProductCard = () => {
         </div>
         <div>
           <div className={s.icon_border}>
-            <img src={cart} />
+            <a href="#cart">
+              <img src={cart} />
+            </a>
           </div>
         </div>
       </div>

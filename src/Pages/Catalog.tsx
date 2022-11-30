@@ -5,6 +5,7 @@ import { ProductCard } from "../Components/_controls/ProductCard";
 import RoundedButton from "../Components/_controls/RoundedButton";
 import { Select } from "../Components/Select/Select";
 import { useRef, useState } from "react";
+import { Link } from "react-router-dom";
 export const Catalog = () => {
   const [typeSelected, setTypeSelected] = useState<
     KeyValuePairInterface<number, string>
@@ -52,7 +53,9 @@ export const Catalog = () => {
       </div>
       <div className={s.catalog_container}>
         {list.map((o) => (
-          <ProductCard key={o} />
+          <Link key={o} to={`/catalog/${o}`}>
+            <ProductCard key={o} />
+          </Link>
         ))}
       </div>
       <div className={s.load_more_btn}>

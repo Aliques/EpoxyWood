@@ -8,22 +8,21 @@ import { Routes, Route } from "react-router-dom";
 import { Catalog } from "./Pages/Catalog";
 import { Contacts } from "./Pages/Contacts";
 import { Faq } from "./Pages/Faq";
+import { Layout } from "./Components/Layout";
+import { Product } from "./Pages/Product";
 
 function App() {
   return (
     <div className="App">
-      <div className="content_container">
-        <Navigation />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/catalog" element={<Catalog />} />
-          <Route path="/faq" element={<Faq />} />
-          <Route path="/contacts" element={<Contacts />} />
-        </Routes>
-      </div>
-      <div className="footer_container">
-        <Footer />
-      </div>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="catalog" element={<Catalog />} />
+          <Route path="catalog/:id" element={<Product />} />
+          <Route path="faq" element={<Faq />} />
+          <Route path="contacts" element={<Contacts />} />
+        </Route>
+      </Routes>
     </div>
   );
 }

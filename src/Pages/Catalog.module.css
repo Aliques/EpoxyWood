@@ -10,6 +10,9 @@
     grid-column-gap: 3%;
     grid-row-gap: 22px;
 }
+.catalog_container a{
+    text-decoration: none;
+}
 .filter_group{
 display: flex;
 }
