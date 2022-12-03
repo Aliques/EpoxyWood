@@ -1,0 +1,47 @@
+.tab {
+    cursor: pointer;
+    padding: 10px 20px;
+    display: inline-block;
+    border-radius: 3px 3px 0px 0px;
+    color: #000;
+
+}
+
+.panels {
+    background: #fffffff6;
+    box-shadow: 0 2rem 2rem #00000080;
+    min-height: 200px;
+    width: 100%;
+    max-width: 500px;
+    border-radius: 3px;
+    overflow: hidden;
+    padding: 20px;
+}
+
+.panel {
+    display: none;
+    animation: fadein .8s;
+}
+
+.radio {
+    display: none;
+}
+
+.tab_photo:checked~.panels .photo_panel,
+.tab_video:checked~.panels .video_panel {
+    display: block
+}
+
+.tab_photo:checked~.tabs .tab_photo_label,
+.tab_video:checked~.tabs .tab_video_label {
+    background: #fffffff6;
+    border: 1px solid black;
+    border-bottom: 0px;
+}
+
+.tab_photo:not(:checked)~.tabs .tab_photo_label,
+.tab_video:not(:checked)~.tabs .tab_video_label {
+    background: #fffffff6;
+    border-bottom: 1px solid black;
+
+}

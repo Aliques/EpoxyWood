@@ -2,7 +2,11 @@ import s from "./ProductCard.module.css";
 import cl from "classnames";
 import cart from "../../Icons/24/cart.svg";
 import defaultImg from "../../Temp/DefaultImage.jpg";
-export const ProductCard = () => {
+import { Link } from "react-router-dom";
+interface ProductCardProps{
+  id:number
+}
+export const ProductCard = ({id}:ProductCardProps) => {
   var description =
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua";
 
@@ -12,10 +16,12 @@ export const ProductCard = () => {
   }
   return (
     <div className={s.container}>
+          <Link key={id} to={`/catalog/${id}`}>
       <div className={s.img_container}>
         <img className={s.product_image} src={defaultImg} alt="#" />
       </div>
       <div className={s.description}>{CutDescription(description)}</div>
+      </Link>
       <div className={s.action}>
         <div className={s.cost_container}>
           <div className={s.currency}>USD</div>

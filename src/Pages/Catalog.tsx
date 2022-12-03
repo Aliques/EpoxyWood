@@ -53,9 +53,7 @@ export const Catalog = () => {
       </div>
       <div className={s.catalog_container}>
         {list.map((o) => (
-          <Link key={o} to={`/catalog/${o}`}>
-            <ProductCard key={o} />
-          </Link>
+            <ProductCard id={o} key={o} />
         ))}
       </div>
       <div className={s.load_more_btn}>

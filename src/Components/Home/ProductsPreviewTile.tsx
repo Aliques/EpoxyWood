@@ -8,10 +8,10 @@ export const ProductsPreviewTile = () => {
   return (
     <div className={s.container}>
       <div className={s.cards_container}>
-        {list.map(() => (
+        {list.map((o) => (
           <div className={s.card_block}>
             <a href="#product">
-              <ProductCard />
+              <ProductCard id={o}/>
             </a>
           </div>
         ))}
