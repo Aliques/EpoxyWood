@@ -1,21 +1,27 @@
+.container {
+    border: 1px dashed black;
+}
+
+.tabs {
+    display: flex;
+    justify-content: flex-end;
+}
+
 .tab {
     cursor: pointer;
     padding: 10px 20px;
     display: inline-block;
-    border-radius: 3px 3px 0px 0px;
+    border-radius: 15px 15px 0px 0px;
     color: #000;
 
 }
 
 .panels {
-    background: #fffffff6;
-    box-shadow: 0 2rem 2rem #00000080;
+    background: #ffffff;
     min-height: 200px;
     width: 100%;
-    max-width: 500px;
     border-radius: 3px;
     overflow: hidden;
-    padding: 20px;
 }
 
 .panel {
@@ -35,13 +41,17 @@
 .tab_photo:checked~.tabs .tab_photo_label,
 .tab_video:checked~.tabs .tab_video_label {
     background: #fffffff6;
-    border: 1px solid black;
-    border-bottom: 0px;
+    border: 1.5px solid var(--natural-green);
+    border-bottom: none;
 }
 
 .tab_photo:not(:checked)~.tabs .tab_photo_label,
 .tab_video:not(:checked)~.tabs .tab_video_label {
     background: #fffffff6;
-    border-bottom: 1px solid black;
+    border-bottom: 1.5px solid var(--natural-green);
+    margin-top: 1.5px;
+}
 
+.tab_video:not(:checked)~.tabs .tab_video_label {
+    margin: 1.5px 1.5px 0px 0px;
 }
