@@ -1,6 +1,4 @@
-.container {
-    border: 1px dashed black;
-}
+.container {}
 
 .tabs {
     display: flex;
@@ -12,8 +10,7 @@
     padding: 10px 20px;
     display: inline-block;
     border-radius: 15px 15px 0px 0px;
-    color: #000;
-
+    color: var(--natural-green);
 }
 
 .panels {
@@ -21,7 +18,7 @@
     min-height: 200px;
     width: 100%;
     border-radius: 3px;
-    overflow: hidden;
+    overflow-y: auto;
 }
 
 .panel {
@@ -35,7 +32,7 @@
 
 .tab_photo:checked~.panels .photo_panel,
 .tab_video:checked~.panels .video_panel {
-    display: block
+    display: flex
 }
 
 .tab_photo:checked~.tabs .tab_photo_label,
@@ -54,4 +51,40 @@
 
 .tab_video:not(:checked)~.tabs .tab_video_label {
     margin: 1.5px 1.5px 0px 0px;
+}
+
+
+.images_wrapper {
+    scrollbar-width: thin;
+    padding: 0 10px 0 0;
+    display: inline-block;
+    position: relative;
+    max-width: 15%;
+    height: 60vh;
+    overflow-y: scroll;
+    scrollbar-color: blue transparent;
+}
+
+.images_wrapper img {
+    width: 100%;
+}
+
+.images_wrapper::-webkit-scrollbar {
+    width: 10px;
+    border: 1.5px solid var(--natural-green);
+    border-radius: 100vh;
+
+}
+
+.images_wrapper::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+
+.images_wrapper::-webkit-scrollbar-thumb {
+    background-color: var(--dark-green);
+    border-radius: 100px;
+    margin-block-start: 4px;
+    border: 3.5px solid transparent;
+    background-clip: content-box;
 }

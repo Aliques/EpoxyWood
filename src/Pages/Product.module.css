@@ -1,7 +1,8 @@
-.container{
+.container {
     margin-top: 65px;
+    margin: 65px 63px 0px 63px;
 }
 
-.description_container{
+.description_container {
     width: 65%;
 }
