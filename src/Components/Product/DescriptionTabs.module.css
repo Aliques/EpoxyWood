@@ -1,4 +1,4 @@
-.container {
+.tabs_container {
     height: 95vh;
 }
 
@@ -53,52 +53,4 @@
 
 .tab_video:not(:checked)~.tabs .tab_video_label {
     margin: 1.5px 1.5px 0px 0px;
-}
-
-
-.images_wrapper {
-    scrollbar-width: thin;
-    padding: 0 10px 0 0;
-    display: inline-block;
-    position: relative;
-    max-width: 15%;
-    max-height: 80vh;
-    overflow-y: scroll;
-    scrollbar-color: blue transparent;
-}
-
-.images_wrapper img {
-    width: 100%;
-}
-
-.images_wrapper::-webkit-scrollbar {
-    width: 10px;
-    border: 1.5px solid var(--natural-green);
-    border-radius: 100vh;
-
-}
-
-.images_wrapper::-webkit-scrollbar-track {
-    background-color: transparent;
-}
-
-
-.images_wrapper::-webkit-scrollbar-thumb {
-    background-color: var(--dark-green);
-    border-radius: 100px;
-    margin-block-start: 4px;
-    border: 3.5px solid transparent;
-    background-clip: content-box;
-}
-
-.presenter_wrapper {
-    text-align: center;
-    width: 100%;
-    overflow: hidden;
-}
-
-.presenter_wrapper img {
-    max-height: 80vh;
-    height: 100%;
-    object-fit: cover;
 }

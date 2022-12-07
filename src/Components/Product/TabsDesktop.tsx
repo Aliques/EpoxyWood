@@ -5,7 +5,7 @@ import { useState } from "react";
 import tempImg from "../../Temp/DefaultImage.jpg"
 export const TabsDesktop = () => {
     const { id } = useParams();
-    let images: number[] = [1, 2, 3, 4, 5]
+    let images: number[] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
     return (
         <div className={s.container}>
             <input className={sl(s.radio, s.tab_photo)} id="tab_photo" name="group" type="radio" checked />
@@ -19,7 +19,9 @@ export const TabsDesktop = () => {
                     <div className={s.images_wrapper}>
                         {images.map(o => <div><img src={tempImg} /></div>)}
                     </div>
-                    <div className={s.presenter_wrapper}></div>
+                    <div className={s.presenter_wrapper}>
+                        <img src={tempImg} />
+                    </div>
                 </div>
                 <div className={sl(s.video_panel, s.panel)} id="video_panel">asd</div>
             </div>
