@@ -16,12 +16,13 @@ export const AboutUs = ({ description }: AboutUsProps) => {
       <div className={s.title}>About us</div>
       <div>
         <img className={s.img} src={aboutUsImg} alt="#" />
-      </div>
-      {description != undefined ? (
+        {description != undefined ? (
         <div className={s.description}>{description}</div>
       ) : (
         <></>
       )}
+      </div>
+      
     </div>
   );
 };

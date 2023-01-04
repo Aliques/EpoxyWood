@@ -1,5 +1,5 @@
 .container {
-    height: 95vh;
+    height: 100%;
 }
 
 .tabs {
@@ -34,7 +34,8 @@
 
 .tab_photo:checked~.panels .photo_panel,
 .tab_video:checked~.panels .video_panel {
-    display: flex
+    display: flex;
+    max-height: 740px;
 }
 
 .tab_photo:checked~.tabs .tab_photo_label,
@@ -61,10 +62,9 @@
     padding: 0 5px 0 0;
     display: inline-block;
     position: relative;
-    max-width: 15%;
-    max-height: 80vh;
+    max-width: 20%;
     overflow-y: scroll;
-    scrollbar-color: blue transparent;
+    scrollbar-color: var(--natural-green) transparent;
 }
 
 .images_wrapper img {
@@ -99,8 +99,14 @@
 }
 
 .presenter_wrapper img {
-    max-height: 80vh;
-    height: 100%;
     width: 100%;
     object-fit: cover;
+}
+
+@media (max-width: 1260px) {
+
+    .tab_photo:checked~.panels .photo_panel,
+    .tab_video:checked~.panels .video_panel {
+        max-height: 530px;
+    }
 }

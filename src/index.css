@@ -12,11 +12,13 @@
   src: url('../public/Fonts/MontserratRegular.ttf') format('truetype');
   font-weight: 400;
 }
+
 @font-face {
   font-family: 'Montserrat';
   src: url('../public/Fonts/MontserratMedium.ttf') format('truetype');
   font-weight: 500;
 }
+
 @font-face {
   font-family: 'Montserrat';
   src: url('../public/Fonts/MontserratSemiBold.ttf') format('truetype');
@@ -29,9 +31,12 @@
   font-weight: 700;
 }
 
+html {
+  font-size: 16px;
+}
+
 body {
   /* min-height: 100vh; */
-  font-size: 14px;
   margin: 0;
   font-family: monse;
   -webkit-font-smoothing: antialiased;
@@ -40,12 +45,37 @@ body {
 
 * {
   margin: 0;
-  
+
   padding: 0;
   color: var(--natural-green);
   font-family: Montserrat, 'Montserrat';
   font-weight: 500;
 }
+
 #root {
   /* height: 100vh; */
+}
+
+@media (min-width: 576px) {
+  body {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  body {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 1400px) {
+  body {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 2160px) {
+  body {
+    font-size: 1rem;
+  }
 }

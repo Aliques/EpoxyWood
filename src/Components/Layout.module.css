@@ -1,14 +1,16 @@
-.footer-container{
+.footer-container {
     flex-grow: 0;
 }
 
-.container{
+.container {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    max-width: 1920px;
+    margin: 0 auto;
     flex-grow: 1;
 }
 
-.content_container{
+.content_container {
     flex-grow: 1;
-  }
+}

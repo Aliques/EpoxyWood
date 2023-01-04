@@ -1,11 +1,11 @@
-.container{
+.container {
     padding-right: 5%;
     position: relative;
     margin-top: 80px;
     padding-bottom: 80px;
 }
 
-.title{
+.title {
     margin: 30px 0;
     font-size: 1.5em;
     text-align: center;
@@ -13,16 +13,16 @@
     font-weight: 600;
 }
 
-.img{
+.img {
     height: 60vh;
-    width: 65vw;
+    width: 85%;
     object-fit: cover;
 }
 
-.description{
+.description {
     padding: 30px;
-    bottom: 25%;
-    left: 56%;
+    bottom: 20%;
+    right: 0;
     position: absolute;
     color: var(--green-grey);
     background-color: var(--dark-green);
@@ -32,30 +32,30 @@
 }
 
 @media (max-width: 768px) {
-    .description{
+    .description {
         font-size: 0.8em;
         padding: 30px;
         bottom: 35%;
         left: 54%;
         width: 35vw;
     }
-    
+
 }
 
-@media (max-width: 576px){
-    .description{
+@media (max-width: 576px) {
+    .description {
         font-size: 0.8em;
         padding: 15px;
         bottom: 25%;
-        left: 44%;
-        width: 40vw;
+        left: 45%;
+        width: 43vw;
     }
-    
+
 }
 
-@media (max-width: 335px){
-   .container{
-    display: none;
-   }
-    
+@media (max-width: 335px) {
+    .container {
+        display: none;
+    }
+
 }

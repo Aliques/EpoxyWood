@@ -3,5 +3,10 @@
 }
 
 .description_container {
-    width: 65%;
+    display: flex;
+    padding-top: 30px;
+}
+
+.tabs_container {
+    width: 60%;
 }

@@ -3,6 +3,7 @@ import sl from "classnames";
 import { useParams } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
 import tempImg from "../../Temp/DefaultImage.jpg";
+// import tempVideo from "../../Temp/SampleVideo"
 export const TabsDesktop = () => {
     const { id } = useParams();
     const tab_photo = useRef<HTMLInputElement>(null);
@@ -38,7 +39,11 @@ export const TabsDesktop = () => {
                         <img src={tempImg} />
                     </div>
                 </div>
-                <div className={sl(s.video_panel, s.panel)} id="video_panel">asd</div>
+                <div className={sl(s.video_panel, s.panel)} id="video_panel">
+                    <video controls >
+                        <source src={require("../../Temp/SampleVideo.mp4")} type="video/mp4"/>
+                    </video>
+                </div>
             </div>
         </div>
     );
