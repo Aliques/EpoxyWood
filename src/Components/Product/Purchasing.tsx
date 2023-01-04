@@ -10,7 +10,7 @@ export const Purchasing = () => {
                 Eposy resin coffee table, Live Edge River table, C-table 
             </div>
             <div>
-            <RaitingStars readonly={true} value={3.5}/>
+            <RaitingStars readonly={false} value={3.5}/>
             </div>
         </div>
     );
