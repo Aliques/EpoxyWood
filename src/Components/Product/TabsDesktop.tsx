@@ -40,9 +40,12 @@ export const TabsDesktop = () => {
                     </div>
                 </div>
                 <div className={sl(s.video_panel, s.panel)} id="video_panel">
-                    <video controls >
-                        <source src={require("../../Temp/SampleVideo.mp4")} type="video/mp4"/>
-                    </video>
+                    <div className={s.images_wrapper}>
+                        {images.map(o => <div key={o}><img src={tempImg} /></div>)}
+                    </div>
+                    <div className={s.presenter_wrapper}>
+                    <video src={require("../../Temp/SampleVideo.mp4")} />
+                    </div>
                 </div>
             </div>
         </div>

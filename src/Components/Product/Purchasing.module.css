@@ -1,0 +1,32 @@
+.container {
+    padding: 50px;
+}
+
+.title {
+    font-size: 1.2rem;
+    color: var(--dark-green);
+    font-weight: 600;
+}
+
+.raiting__container {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.reviews__count {
+    margin-left: 1rem;
+}
+
+.short__description {
+    padding: 1rem;
+}
+
+.short__description li {
+    margin-top: 0.5rem;
+}
+
+.short__description li span {
+    color: var(--dark-green);
+    font-weight: 600;
+}

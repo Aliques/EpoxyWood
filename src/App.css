@@ -1,10 +1,10 @@
-:root{
+:root {
   --green-grey: #98A6A8;
   --dark-green: #314E52;
   --natural-green: #678983;
-  --main-background:#e1e3ee;
-  --light-text:#e0e4ee;
-  --footer-backgound:#f4fafe;
+  --main-background: #e1e3ee;
+  --light-text: #e0e4ee;
+  --footer-backgound: #f4fafe;
   --light-gray: #b2b2b2;
+  --green-gray-light: #98a6a833;
 }
-
