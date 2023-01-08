@@ -24,19 +24,36 @@ export const DropCard = ({ children, title }: Props) => {
 
   return (
     <div ref={contentRef} className={s.container}>
-      <input type='checkbox' className={s.flag} ref={flagRef} />
-      <label
-        className={s.title__container}
-        onClick={() => toggle(!open)}
-        onKeyDown={() => toggle(!open)}
-      >
-        <div className={s.title}>{title}</div>
-        <span className={s.arrow}>
+      <input className={s.flag} type='checkbox' ref={flagRef} />
+      <div className={s.title__container}>
+        <div
+          className={s.title}
+          onClick={(o) => toggle(!open)}
+          onKeyDown={() => toggle(!open)}
+        >
+          {title}
+        </div>
+        <span
+          className={s.arrow}
+          onClick={(o) => toggle(!open)}
+          onKeyDown={() => toggle(!open)}
+        >
           <span></span>
           <span></span>
         </span>
-      </label>
-      <div className={s.content}>{children}</div>
+      </div>
+      {open! && (
+        <div className={s.content}>
+          <div
+            className={s.title}
+            onClick={(o) => toggle(!open)}
+            onKeyDown={() => toggle(!open)}
+          >
+            {title}
+          </div>
+          {children}
+        </div>
+      )}
     </div>
   );
 };

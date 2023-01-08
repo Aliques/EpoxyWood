@@ -4,8 +4,14 @@ import { useParams } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
 import { RaitingStars } from "../_controls/RaitingStars";
 import { DropCard } from "../_controls/DropCard";
+import { Select } from "../Select/Select";
 
 export const Purchasing = () => {
+  const data: KeyValuePairInterface<number, string>[] = [
+    { key: 1, value: "asd" },
+    { key: 2, value: "qwe" },
+    { key: 3, value: "zxc" },
+  ];
   return (
     <div className={s.container}>
       <div className={s.title}>
@@ -28,8 +34,14 @@ export const Purchasing = () => {
               <div>qweqw</div>
               <div>qweqw</div>
               <div>qweqw</div>
+              <div>qweqw asd asd asdasda sd as </div>
+              <div>qweqw asdasd as</div>
+              <div>qweqw asd asd as dasd</div>
             </div>
           </DropCard>
+        </li>
+        <li>
+          <span>Materials:</span>
         </li>
       </ul>
     </div>
